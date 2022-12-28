@@ -98,7 +98,7 @@ Entity fsm is
  contador:
  process(clk):
  begin
-   if clk='1' then 
+   if rising_edge(clk) then 
      if rescont then cuenta<='00000';
      else cuenta<=cuenta+'00001';
      end if;
