@@ -33,7 +33,7 @@ begin
        end if;
     end process;
     
-    CODE(0) <= INTEGER (q1); -- Salida temperatura
-    CODE(1) <= INTEGER (q2); -- Salida tiempo
+    TEMPERATURA <= q1; -- Salida temperatura
+    TIEMPO <= q2; -- Salida tiempo
 
 end Behavioral;
