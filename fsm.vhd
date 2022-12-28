@@ -27,7 +27,7 @@ Entity fsm is
        begin
        if reset='1' then
          presente<=comienzo;
-       else clk='1'  then
+       else if rising_edge(clk)  then
          case presente is
            when comienzo=>
             if switches='100000' then
