@@ -5,7 +5,7 @@ Entity temporizador is
   Port( reset, clk, ok,ready: in std_logic;
        finish: out std_logic;
        display_time:in STD_LOGIC_VECTOR (5 downto 0));
-  end fsm;
+  end temporizador;
   
   Architecture descripcion of fsm is
        TYPE estado is
@@ -22,7 +22,7 @@ Entity temporizador is
        begin
        if reset='1' then
          presente<=mode_done;
-       else rising_edge(clk)  then
+       else if rising_edge(clk)  then
          case presente is
            when mode_done=>
             if ready='1' then
@@ -54,7 +54,7 @@ Entity temporizador is
  contador:
  process(clk):
  begin
-   if clk='1' then 
+   if rising_edge(clk) then 
      if rescont then cuenta<='00000';
      else cuenta<=cuenta+'00001';
      end if;
