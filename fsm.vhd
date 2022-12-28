@@ -2,9 +2,9 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 --
 Entity fsm is 
-  Port( reset, clk, ok: in std_logic;
+  Port( reset, clk, ok,fin_cuenta: in std_logic;
        switches: in std_logic_vector(0 to 5);
-       led: out std_logic
+       led: out std_logic;
        TIEMPO : in STD_LOGIC_VECTOR (5 downto 0); --MAXIMO TIEMPO 63 SEGUNDOS "111111"
        TEMPERATURA : in STD_LOGIC_VECTOR (7 downto 0); --MAXIMA TEMP 255 GRADOS "11111111");
        display_time:out STD_LOGIC_VECTOR (5 downto 0);
@@ -15,10 +15,9 @@ Entity fsm is
        TYPE estado is
        (comienzo, manual, automatico, ejecucion, listo);
        signal presente:estado:=comienzo;
-       signal rescont: boolean:=false;
-       signal cuenta, asig_time: STD_LOGIC_VECTOR (5 downto 0); -- Rango de temperatura 0-300
+       signal asig_time: STD_LOGIC_VECTOR (5 downto 0); -- Rango de temperatura 0-300
        signal asig_temp: STD_LOGIC_VECTOR (7 downto 0); -- Rango de tiempo 0-30
-       signal fin_cuenta: boolean;
+
        Begin
          
          
@@ -57,7 +56,7 @@ Entity fsm is
               presente<=ejecucion;
             end if;
          when ejecucion=>
-            if fin_cuenta then 
+            if fin_cuenta='1' then 
               presente<=listo;
             end if;
         when listo=>
@@ -76,37 +75,25 @@ Entity fsm is
         led<='0';
         display_time<='00000';
         display_temp<='0000000';
-        rescont<=true;
       when manual or automatico=>
         led<='0';
         display_time<=asig_time;
         display_temp<=asig_temp;
-        rescont<=true;
       when ejecucion=>
         led<='0';
         display_time<=asig_time;
         display_temp<=asig_temp;
-        rescont<=false;  
       when listo=>
         led<='1';
         display_time<=asig_time;
         display_temp<=asig_temp;
-        rescont<=true;
    end case;
    end process salida;
      
- contador:
- process(clk):
- begin
-   if rising_edge(clk) then 
-     if rescont then cuenta<='00000';
-     else cuenta<=cuenta+'00001';
-     end if;
-   end if;
- end process contador;   
+
      
      
-   fin_cuenta<=true when cuenta=asig_time else false;  
+   
      
    end descripcion;
   
