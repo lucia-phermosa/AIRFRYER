@@ -8,7 +8,7 @@ Entity fsm is
        TIEMPO : in STD_LOGIC_VECTOR (5 downto 0); --MAXIMO TIEMPO 63 SEGUNDOS "111111"
        TEMPERATURA : in STD_LOGIC_VECTOR (7 downto 0); --MAXIMA TEMP 255 GRADOS "11111111");
        display_time:out STD_LOGIC_VECTOR (5 downto 0);
-       display_temp: in STD_LOGIC_VECTOR (7 downto 0));
+       display_temp: out STD_LOGIC_VECTOR (7 downto 0));
   end fsm;
   
   Architecture descripcion of fsm is
