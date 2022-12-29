@@ -1,5 +1,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 entity AIRFRYER is
    Port (
@@ -17,8 +18,8 @@ end AIRFRYER;
 architecture Behavioral of AIRFRYER is
    signal boton_sync1: std_logic;
    signal boton_edge1: std_logic;
-   signal boton_sync2: std_logic;
-   signal boton_edge2: std_logic;
+   signal boton_sync2: std_logic_vector range'Temp_time;
+   signal boton_edge2: std_logic_vector range'Temp_time;
    signal sel_temp: std_logic_vector(7 downto 0); -- Salida del counter
    signal sel_tiempo: std_logic_vector(5 downto 0); -- Salida del counter
    signal temp: std_logic_vector(7 downto 0); -- Salida de la fsm
@@ -89,9 +90,36 @@ begin
    );
      
    Inst_SYNCHRONZR: SYNCHRONZR Port Map (
-      CLK => CLK,
+      CLK => clk_1hz,
       ASYNC_IN => OK,
       SYNC_OUT => boton_sync1
+   );
+   
+   Inst_EDGEDTCTR: EDGEDTCTR Port Map (
+      CLK => clk_1hz,
+      SYNC_IN => boton_sync1,
+      EDGE => boton_edge1
+   );
+   
+   sincronizadores_buttons: for i in temp_time'range generate
+     Inst_SYNCHRONZR_i: SYNCHRONZR Port Map (
+       CLK => clk_1hz,
+       ASYNC_IN => Temp_time(i),
+       SYNC_OUT => boton_sync2(i)
+     );
+     Inst_EDGEDTCTR: EDGEDTCTR Port Map (
+       CLK => clk_1hz,
+       SYNC_IN => boton_sync2(i),
+       EDGE => boton_edge2(i)
+    );
+  end generate;
+  
+  Inst_COUNTER: COUNTER Port Map (
+      CLK => clk_1hz,
+      RESET => RESET,    
+      TEMP_TIME => boton_edge2,
+      TIEMPO => sel_tiempo ,
+      TEMPERATURA => sel_temp
    );
 
 end Behavioral;
