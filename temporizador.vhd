@@ -7,22 +7,37 @@ Entity temporizador is
        display_time:in STD_LOGIC_VECTOR (5 downto 0));
   end temporizador;
   
-  Architecture descripcion of fsm is
+  Architecture descripcion of temporizador is
        TYPE estado is
        (mode_cont, mode_done);
        signal presente:estado:=mode_done;
        signal rescont: boolean:=false;
        signal cuenta, asig_time: STD_LOGIC_VECTOR (5 downto 0); -- Rango de temperatura 0-300
        signal fin_cuenta:boolean;
-       Begin
+       signal clk_1hz: std_logic;
+
+       Component clk1Hz 
+         Port (
+           CLK: in  STD_LOGIC;
+           reset  : in  STD_LOGIC;
+           CLK_1hz : out STD_LOGIC
+         );
+       End component;
+         
+   Begin   
+       Inst_clk1Hz: clk1Hz Port Map (
+         CLK => clk,
+         reset => reset,
+         CLK_1hz => clk_1hz
+       );
          
          
        maquina:
-       process(clk, reset)
+       process(clk_1hz, reset)
        begin
        if reset='1' then
          presente<=mode_done;
-       else if rising_edge(clk)  then
+       else if rising_edge(clk_1hz)  then
          case presente is
            when mode_done=>
             if ready='1' then
@@ -52,9 +67,9 @@ Entity temporizador is
    end process salida;
      
  contador:
- process(clk):
+ process(clk_1hz):
  begin
-   if rising_edge(clk) then 
+   if rising_edge(clk_1hz) then 
      if rescont then cuenta<='00000';
      else cuenta<=cuenta+'00001';
      end if;
