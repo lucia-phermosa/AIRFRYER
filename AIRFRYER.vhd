@@ -24,7 +24,15 @@ architecture Behavioral of AIRFRYER is
    signal temp: std_logic_vector(7 downto 0); -- Salida de la fsm
    signal tiempo: std_logic_vector(5 downto 0); -- Salida de la fsm
    signal time: std_logic_vector(5 downto 0); -- Salida del temporizador
+   signal clk_1hz: std_logic;
 
+  Component clk1Hz 
+      Port (CLK: in  STD_LOGIC;
+            reset  : in  STD_LOGIC;
+            CLK_1hz : out STD_LOGIC
+      );
+  End component;
+   
    Component SYNCHRONZR
       Port ( CLK : in STD_LOGIC;
              ASYNC_IN : in STD_LOGIC;
@@ -66,13 +74,24 @@ architecture Behavioral of AIRFRYER is
       );
    End component;
    
-   Component decoder1
+   Component decoder
       Port ( code : in std_logic_vector(3 DOWNTO 0);
              led : out std_logic_vector(6 DOWNTO 0)
       );
    End component; 
    
 begin
-
+  
+   Inst_clk1Hz: clk1Hz Port Map (
+         CLK => CLK,
+         reset => RESET,
+         CLK_1hz => clk_1hz
+   );
+     
+   Inst_SYNCHRONZR: SYNCHRONZR Port Map (
+      CLK => CLK,
+      ASYNC_IN => OK,
+      SYNC_OUT => boton_sync1
+   );
 
 end Behavioral;
