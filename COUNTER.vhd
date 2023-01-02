@@ -19,12 +19,12 @@ begin
     process(CLK,RESET)
     begin  
        if RESET = '1' then 
-          q1 <=(OTHERS = > '0');
-          q2 <= (OTHERS = > '0');
+          q1 <=(OTHERS => '0');
+          q2 <= (OTHERS => '0');
        elsif CLK'event and CLK = '1' then 
           if MANUAL = '0' then
-               q1 <=(OTHERS = > '0');
-               q2 <= (OTHERS = > '0');
+               q1 <=(OTHERS => '0');
+               q2 <= (OTHERS => '0');
            elsif MANUAL = '1' then   
              if(TEMP_TIME(0) = '1') then
                    q1 <= q1 + "00010100"; -- Incrementa la temperatura en 20 grados
