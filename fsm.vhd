@@ -44,13 +44,13 @@ Entity fsm is
             when automatico=>
             if switches="001000" then--pollo
               asig_time<="110010";
-              asig_temp<="1100100";
+              asig_temp<="01100100";
             elsif switches="000100" then--pescado
               asig_time<="101101";
-              asig_temp<="1101110";
+              asig_temp<="01101110";
             elsif switches="000010" then--patatas
               asig_time<="101000";
-              asig_temp<="1111000";
+              asig_temp<="01111000";
             elsif switches="000001" then--bollo
               asig_time<="100011";
               asig_temp<="10000010";
@@ -78,8 +78,8 @@ Entity fsm is
     case presente is
       when comienzo=>
         led<='0';
-        display_time<="00000";
-        display_temp<="0000000";
+        display_time<="000000";
+        display_temp<="00000000";
       when manual =>
         led<='0';
         display_time<=asig_time;
