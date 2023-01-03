@@ -25,12 +25,12 @@ architecture Behavioral of AIRFRYER is
    signal temp: std_logic_vector(7 downto 0); -- Salida de la fsm
    signal tiempo: std_logic_vector(5 downto 0); -- Salida de la fsm
    signal time: std_logic_vector(5 downto 0); -- Salida del temporizador
-   signal clk_1hz: std_logic;
+   signal clk_1khz: std_logic;
 
-  Component clk1Hz 
+  Component clk1kHz 
       Port (CLK: in  STD_LOGIC;
             reset  : in  STD_LOGIC;
-            CLK_1hz : out STD_LOGIC
+            CLK_1khz : out STD_LOGIC
       );
   End component;
    
@@ -83,39 +83,39 @@ architecture Behavioral of AIRFRYER is
    
 begin
   
-   Inst_clk1Hz: clk1Hz Port Map (
+   Inst_clk1kHz: clk1kHz Port Map (
          CLK => CLK,
          reset => RESET,
-         CLK_1hz => clk_1hz
+         CLK_1khz => clk_1khz
    );
      
    Inst_SYNCHRONZR: SYNCHRONZR Port Map (
-      CLK => clk_1hz,
+      CLK => clk_1khz,
       ASYNC_IN => OK,
       SYNC_OUT => boton_sync1
    );
    
    Inst_EDGEDTCTR: EDGEDTCTR Port Map (
-      CLK => clk_1hz,
+      CLK => clk_1khz,
       SYNC_IN => boton_sync1,
       EDGE => boton_edge1
    );
    
    sincronizadores_buttons: for i in temp_time'range generate
      Inst_SYNCHRONZR_i: SYNCHRONZR Port Map (
-       CLK => clk_1hz,
+       CLK => clk_1khz,
        ASYNC_IN => Temp_time(i),
        SYNC_OUT => boton_sync2(i)
      );
      Inst_EDGEDTCTR: EDGEDTCTR Port Map (
-       CLK => clk_1hz,
+       CLK => clk_1khz,
        SYNC_IN => boton_sync2(i),
        EDGE => boton_edge2(i)
     );
   end generate;
   
   Inst_COUNTER: COUNTER Port Map (
-      CLK => clk_1hz,
+      CLK => clk_1khz,
       RESET => RESET,    
       TEMP_TIME => boton_edge2,
       TIEMPO => sel_tiempo ,
