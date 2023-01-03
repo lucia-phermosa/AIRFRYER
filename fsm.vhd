@@ -5,9 +5,9 @@ Entity fsm is
   Port( reset, clk, ok,fin_cuenta: in std_logic;
        switches: in std_logic_vector(0 to 5);
        led: out std_logic;
-       TIEMPO : in STD_LOGIC_VECTOR (5 downto 0); --MAXIMO TIEMPO 63 SEGUNDOS "111111"
+       TIEMPO : in STD_LOGIC_VECTOR (7 downto 0); --MAXIMO TIEMPO 63 SEGUNDOS "111111"
        TEMPERATURA : in STD_LOGIC_VECTOR (7 downto 0); --MAXIMA TEMP 255 GRADOS "11111111");
-       display_time:out STD_LOGIC_VECTOR (5 downto 0);
+       display_time:out STD_LOGIC_VECTOR (7 downto 0);
        display_temp: out STD_LOGIC_VECTOR (7 downto 0));
   end fsm;
   
@@ -16,7 +16,7 @@ Entity fsm is
        (comienzo, manual, automatico, ejecucion, listo);
        signal presente: estado;
        signal siguiente: estado;
-       signal asig_time: STD_LOGIC_VECTOR (5 downto 0); -- Rango de temperatura 0-300
+       signal asig_time: STD_LOGIC_VECTOR (7 downto 0); -- Rango de temperatura 0-300
        signal asig_temp: STD_LOGIC_VECTOR (7 downto 0); -- Rango de tiempo 0-30
 
        Begin
@@ -43,16 +43,16 @@ Entity fsm is
             end if;
             when automatico=>
             if switches="001000" then--pollo
-              asig_time<="110010";
+              asig_time<="00110010";
               asig_temp<="01100100";
             elsif switches="000100" then--pescado
-              asig_time<="101101";
+              asig_time<="00101101";
               asig_temp<="01101110";
             elsif switches="000010" then--patatas
-              asig_time<="101000";
+              asig_time<="00101000";
               asig_temp<="01111000";
             elsif switches="000001" then--bollo
-              asig_time<="100011";
+              asig_time<="00100011";
               asig_temp<="10000010";
             end if;
               presente<=ejecucion;
@@ -78,7 +78,7 @@ Entity fsm is
     case presente is
       when comienzo=>
         led<='0';
-        display_time<="000000";
+        display_time<="00000000";
         display_temp<="00000000";
       when manual =>
         led<='0';
