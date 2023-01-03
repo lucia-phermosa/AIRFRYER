@@ -7,7 +7,7 @@ entity COUNTER is
            RESET : in STD_LOGIC;     
            MANUAL : in STD_LOGIC; -- interruptor para indicar que haremos cuenta manual
            TEMP_TIME : in STD_LOGIC_VECTOR (3 downto 0); --cuatro botones
-           TIEMPO : out STD_LOGIC_VECTOR (5 downto 0); --MAXIMO TIEMPO 63 SEGUNDOS "111111"
+           TIEMPO : out STD_LOGIC_VECTOR (7 downto 0); --MAXIMO TIEMPO 63 SEGUNDOS "111111"
            TEMPERATURA : out STD_LOGIC_VECTOR (7 downto 0) --MAXIMA TEMP 255 GRADOS "11111111"
     );       
 end COUNTER;
