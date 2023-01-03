@@ -18,27 +18,27 @@ Entity temporizador is
        signal fin_cuenta:boolean;
        signal cuenta: unsigned (display_time'range);
        signal aux_cuenta: STD_LOGIC_VECTOR (7 downto 0); 
-       signal clk_1khz: std_logic;
+       signal clk_1hz: std_logic;
                                 
-     Component clk1kHz 
+     Component clk1Hz 
       Port (CLK: in  STD_LOGIC;
             reset  : in  STD_LOGIC;
-            CLK_1khz : out STD_LOGIC
+            CLK_1hz : out STD_LOGIC
       );
      End component;                         
    Begin   
-       Inst_clk1kz: clk1khz Port Map (
+       Inst_clk1hz: clk1hz Port Map (
          CLK => clk,
          reset => reset,
-         CLK_1khz => clk_1khz
+         CLK_1hz => clk_1hz
        );
                                 
        maquina:
-       process(clk_1khz, reset)
+       process(clk, reset)
        begin
        if reset='1' then
          presente<=mode_done;
-       elsif rising_edge(clk_1khz)  then
+       elsif rising_edge(clk)  then
          case presente is
            when mode_done=>
             if ready='1' then
@@ -68,9 +68,9 @@ Entity temporizador is
    end process salida;
      
  contador:
- process(clk)
+ process(clk_1hz)
  begin
-   if rising_edge(clk) then 
+   if rising_edge(clk_1hz) then 
      if rescont then cuenta<="00000000";
      else cuenta<=cuenta+1;
      end if;
