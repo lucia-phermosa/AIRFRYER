@@ -5,6 +5,7 @@ USE ieee.numeric_std.all;
 Entity temporizador is 
   Port( reset, clk, ok,ready: in std_logic;
        finish: out std_logic;
+       salida_time: out STD_LOGIC_VECTOR (7 downto 0);
        display_time:in STD_LOGIC_VECTOR (7 downto 0));
   end temporizador;
   
@@ -17,10 +18,11 @@ Entity temporizador is
        signal fin_cuenta:boolean;
        signal cuenta: unsigned (display_time'range);
        signal aux_cuenta: STD_LOGIC_VECTOR (7 downto 0); 
+       signal clk_10khz: std_logic;
    Begin   
          
        maquina:
-       process(clk, reset)
+       process(clk_10khz, reset)
        begin
        if reset='1' then
          presente<=mode_done;
