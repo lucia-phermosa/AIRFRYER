@@ -41,9 +41,9 @@ architecture tb of tb_fsm is
     signal fin_cuenta   : std_logic;
     signal switches     : std_logic_vector (0 to 5);
     signal led          : std_logic;
-    signal TIEMPO       : std_logic_vector (5 downto 0);
+    signal TIEMPO       : std_logic_vector (7 downto 0);
     signal TEMPERATURA  : std_logic_vector (7 downto 0);
-    signal display_time : std_logic_vector (5 downto 0);
+    signal display_time : std_logic_vector (7 downto 0);
     signal display_temp : std_logic_vector (7 downto 0);
 
     constant TbPeriod : time := 1 ns; -- EDIT Put right period here
@@ -121,25 +121,25 @@ begin
         ok <= '0';
         fin_cuenta <= '0';
         switches <= (others => '0');
-        TIEMPO <= "100011";
+        TIEMPO <= "00100011";
         TEMPERATURA <= "10000010";
         wait for  TbPeriod;
         ok <= '1';
         fin_cuenta <= '0';
         switches <= (others => '0');
-        TIEMPO <= "100011";
+        TIEMPO <= "00100011";
         TEMPERATURA <= "10000010";
         wait for  TbPeriod;
         ok <= '0';
         fin_cuenta <= '1';
         switches <= (others => '0');
-        TIEMPO <= "100011";
+        TIEMPO <= "00100011";
         TEMPERATURA <= "10000010";
         wait for  TbPeriod;
         ok <= '1';
         fin_cuenta <= '0';
         switches <= (others => '0');
-        TIEMPO <= "100011";
+        TIEMPO <= "00100011";
         TEMPERATURA <= "10000010";
 
         -- Stop the clock and hence terminate the simulation
