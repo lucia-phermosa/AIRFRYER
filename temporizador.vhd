@@ -5,7 +5,7 @@ USE ieee.numeric_std.all;
 Entity temporizador is 
   Port( reset, clk, ok,ready: in std_logic;
        finish: out std_logic;
-       display_time:in STD_LOGIC_VECTOR (5 downto 0));
+       display_time:in STD_LOGIC_VECTOR (7 downto 0));
   end temporizador;
   
   Architecture descripcion of temporizador is
@@ -13,10 +13,10 @@ Entity temporizador is
        (mode_cont, mode_done);
        signal presente:estado:=mode_done;
        signal rescont: boolean:=false;
-       signal asig_time: STD_LOGIC_VECTOR (5 downto 0); -- Rango de temperatura 0-300
+       signal asig_time: STD_LOGIC_VECTOR (7 downto 0); -- Rango de temperatura 0-300
        signal fin_cuenta:boolean;
        signal cuenta: unsigned (display_time'range);
-       signal aux_cuenta: STD_LOGIC_VECTOR (5 downto 0); 
+       signal aux_cuenta: STD_LOGIC_VECTOR (7 downto 0); 
    Begin   
          
        maquina:
@@ -57,7 +57,7 @@ Entity temporizador is
  process(clk)
  begin
    if rising_edge(clk) then 
-     if rescont then cuenta<="000000";
+     if rescont then cuenta<="00000000";
      else cuenta<=cuenta+1;
      end if;
    end if;
