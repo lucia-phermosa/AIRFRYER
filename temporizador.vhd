@@ -26,7 +26,7 @@ Entity temporizador is
        begin
        if reset='1' then
          presente<=mode_done;
-       elsif rising_edge(clk)  then
+       elsif rising_edge(clk_10khz)  then
          case presente is
            when mode_done=>
             if ready='1' then
@@ -64,8 +64,9 @@ Entity temporizador is
      end if;
    end if;
  end process contador;   
-     
+                                  
    aux_cuenta<=std_logic_vector(cuenta);
+   salida_time<=std_logic_vector(cuenta);                           
    fin_cuenta<=true when aux_cuenta=asig_time else false;  
      
    end descripcion;
