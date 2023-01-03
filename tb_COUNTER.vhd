@@ -15,7 +15,7 @@ architecture tb of tb_COUNTER is
               RESET       : in std_logic;
               MANUAL      : in std_logic;
               TEMP_TIME   : in std_logic_vector (3 downto 0);
-              TIEMPO      : out std_logic_vector (5 downto 0);
+              TIEMPO      : out std_logic_vector (7 downto 0);
               TEMPERATURA : out std_logic_vector (7 downto 0));
     end component;
 
@@ -23,7 +23,7 @@ architecture tb of tb_COUNTER is
     signal RESET       : std_logic;
     signal MANUAL      : std_logic;
     signal TEMP_TIME   : std_logic_vector (3 downto 0);
-    signal TIEMPO      : std_logic_vector (5 downto 0);
+    signal TIEMPO      : std_logic_vector (7 downto 0);
     signal TEMPERATURA : std_logic_vector (7 downto 0);
 
     constant TbPeriod : time := 50 ns; -- EDIT Put right period here
