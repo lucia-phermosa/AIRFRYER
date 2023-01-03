@@ -18,15 +18,27 @@ Entity temporizador is
        signal fin_cuenta:boolean;
        signal cuenta: unsigned (display_time'range);
        signal aux_cuenta: STD_LOGIC_VECTOR (7 downto 0); 
-       signal clk_10khz: std_logic;
+       signal clk_1khz: std_logic;
+                                
+     Component clk1kHz 
+      Port (CLK: in  STD_LOGIC;
+            reset  : in  STD_LOGIC;
+            CLK_1khz : out STD_LOGIC
+      );
+     End component;                         
    Begin   
-         
+       Inst_clk1kz: clk1khz Port Map (
+         CLK => clk,
+         reset => reset,
+         CLK_1khz => clk_1khz
+       );
+                                
        maquina:
-       process(clk_10khz, reset)
+       process(clk_1khz, reset)
        begin
        if reset='1' then
          presente<=mode_done;
-       elsif rising_edge(clk_10khz)  then
+       elsif rising_edge(clk_1khz)  then
          case presente is
            when mode_done=>
             if ready='1' then
