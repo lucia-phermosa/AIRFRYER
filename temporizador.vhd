@@ -1,5 +1,6 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;
 --
 Entity temporizador is 
   Port( reset, clk, ok,ready: in std_logic;
@@ -12,9 +13,10 @@ Entity temporizador is
        (mode_cont, mode_done);
        signal presente:estado:=mode_done;
        signal rescont: boolean:=false;
-       signal cuenta, asig_time: STD_LOGIC_VECTOR (5 downto 0); -- Rango de temperatura 0-300
+       signal asig_time: STD_LOGIC_VECTOR (5 downto 0); -- Rango de temperatura 0-300
        signal fin_cuenta:boolean;
-         
+       signal cuenta: unsigned (display_time'range);
+       signal aux_cuenta: STD_LOGIC_VECTOR (5 downto 0); 
    Begin   
          
        maquina:
@@ -22,7 +24,7 @@ Entity temporizador is
        begin
        if reset='1' then
          presente<=mode_done;
-       else if rising_edge(clk)  then
+       elsif rising_edge(clk)  then
          case presente is
            when mode_done=>
             if ready='1' then
@@ -52,16 +54,16 @@ Entity temporizador is
    end process salida;
      
  contador:
- process(clk):
+ process(clk)
  begin
    if rising_edge(clk) then 
-     if rescont then cuenta<='00000';
-     else cuenta<=cuenta+'00001';
+     if rescont then cuenta<="000000";
+     else cuenta<=cuenta+1;
      end if;
    end if;
  end process contador;   
      
-     
-   fin_cuenta<=true when cuenta=asig_time else false;  
+   aux_cuenta<=std_logic_vector(cuenta);
+   fin_cuenta<=true when aux_cuenta=asig_time else false;  
      
    end descripcion;
