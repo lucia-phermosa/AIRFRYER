@@ -134,12 +134,6 @@ begin
       --display_time:out STD_LOGIC_VECTOR (5 downto 0);
       --display_temp: out STD_LOGIC_VECTOR (7 downto 0)
   );
-  Inst_fsm: temporizador Port Map (
-      reset=>RESET,
-      clk=>clk_1khz,
-      ok=>OK,
-      finish=>fin_de_cuenta,
-      display_time=>time
-  );
+ 
 
 end Behavioral;
