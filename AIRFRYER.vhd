@@ -26,6 +26,7 @@ architecture Behavioral of AIRFRYER is
    signal tiempo: std_logic_vector(5 downto 0); -- Salida de la fsm
    signal time: std_logic_vector(5 downto 0); -- Salida del temporizador
    signal clk_1khz: std_logic;
+   signal fin_de_cuenta:std_logic;
 
   Component clk1kHz 
       Port (CLK: in  STD_LOGIC;
@@ -121,5 +122,18 @@ begin
       TIEMPO => sel_tiempo ,
       TEMPERATURA => sel_temp
    );
+   
+  Inst_fsm: fsm Port Map (
+      reset=>RESET,
+      clk=>clk_1khz,
+      ok=>OK,
+      fin_cuenta=>fin_de_cuenta,
+      switches=>Switches,
+      led=>Led,
+      TIEMPO : in STD_LOGIC_VECTOR (5 downto 0); 
+      TEMPERATURA : in STD_LOGIC_VECTOR (7 downto 0); 
+      --display_time:out STD_LOGIC_VECTOR (5 downto 0);
+      --display_temp: out STD_LOGIC_VECTOR (7 downto 0)
+  );
 
 end Behavioral;
