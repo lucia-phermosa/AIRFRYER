@@ -108,7 +108,7 @@ begin
        ASYNC_IN => Temp_time(i),
        SYNC_OUT => boton_sync2(i)
      );
-     Inst_EDGEDTCTR: EDGEDTCTR Port Map (
+     Inst_EDGEDTCTR_i: EDGEDTCTR Port Map (
        CLK => clk_1khz,
        SYNC_IN => boton_sync2(i),
        EDGE => boton_edge2(i)
