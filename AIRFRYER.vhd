@@ -126,14 +126,20 @@ begin
   Inst_fsm: fsm Port Map (
       reset=>RESET,
       clk=>clk_1khz,
-      ok=>OK,
-      fin_cuenta=>fin_de_cuenta,
+      finish=>fin_de_cuenta,
       switches=>Switches,
       led=>Led,
-      TIEMPO : in STD_LOGIC_VECTOR (5 downto 0); 
-      TEMPERATURA : in STD_LOGIC_VECTOR (7 downto 0); 
+      TIEMPO=>sel_tiempo,
+      TEMPERATURA =>sel_temp
       --display_time:out STD_LOGIC_VECTOR (5 downto 0);
       --display_temp: out STD_LOGIC_VECTOR (7 downto 0)
+  );
+  Inst_fsm: temporizador Port Map (
+      reset=>RESET,
+      clk=>clk_1khz,
+      ok=>OK,
+      finish=>fin_de_cuenta,
+      display_time=>time
   );
 
 end Behavioral;
