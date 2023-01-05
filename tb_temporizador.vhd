@@ -56,9 +56,9 @@ begin
         -- Reset generation
         -- EDIT: Check that reset is really your reset signal
         reset <= '1';
-        wait for 100 ns;
+        wait for 10 ns;
         reset <= '0';
-        wait for 100 ns;
+        wait for 10 ns;
 
         -- EDIT Add stimuli here
         wait for TbPeriod;
@@ -67,12 +67,17 @@ begin
         display_time <= (others => '0');
         wait for TbPeriod;
         ok <= '0';
-        ready <= '0';
+        ready <= '1';
         display_time <= "00011111";
         wait for TbPeriod;
         ok <= '0';
-        ready <= '0';
-        display_time <= (others => '0');
+        ready <= '1';
+        display_time <= "00011111";
+        wait for TbPeriod;
+        ok <= '0';
+        ready <= '1';
+        display_time <= "00011111";
+        wait for 100*TbPeriod;
         -- Stop the clock and hence terminate the simulation
         TbSimEnded <= '1';
         wait;
