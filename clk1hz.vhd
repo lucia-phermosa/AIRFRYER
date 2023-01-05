@@ -11,14 +11,14 @@ end clk1Hz;
  
 architecture Behavioral of clk1Hz is
     signal temporal: STD_LOGIC;
-    signal contador: integer range 0 to 49999999 := 0;
+    signal contador: integer range 0 to 999 := 0;
 begin
     divisor_frecuencia: process (reset, CLK) begin
         if (reset = '1') then
             temporal <= '0';
             contador <= 0;
         elsif rising_edge(CLK) then
-            if (contador = 49999999) then
+            if (contador = 999) then
                 temporal <= NOT(temporal);
                 contador <= 0;
             else
