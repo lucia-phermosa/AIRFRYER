@@ -27,11 +27,17 @@ architecture Behavioral of AIRFRYER is
    signal time: std_logic_vector(5 downto 0); -- Salida del temporizador
    signal clk_1khz: std_logic;
    signal fin_de_cuenta:std_logic;
+   signal ready_:std_logic;
 
   Component clk1kHz 
       Port (CLK: in  STD_LOGIC;
             reset  : in  STD_LOGIC;
             CLK_1khz : out STD_LOGIC
+      );
+  Component clk1Hz 
+      Port (CLK: in  STD_LOGIC;
+            reset  : in  STD_LOGIC;
+            CLK_1hz : out STD_LOGIC
       );
   End component;
    
@@ -61,7 +67,7 @@ architecture Behavioral of AIRFRYER is
    Component fsm
       Port ( reset, clk, ok,fin_cuenta: in std_logic;
              switches: in std_logic_vector(0 to 5);
-             led: out std_logic;
+             led,ready: out std_logic;
              TIEMPO : in STD_LOGIC_VECTOR (5 downto 0); 
              TEMPERATURA : in STD_LOGIC_VECTOR (7 downto 0); 
              display_time:out STD_LOGIC_VECTOR (5 downto 0);
@@ -70,7 +76,7 @@ architecture Behavioral of AIRFRYER is
    End component;
      
    Component temporizador
-      Port ( reset, clk, ok,ready: in std_logic;
+      Port ( reset, clk,ready: in std_logic;
              finish: out std_logic;
              display_time:in STD_LOGIC_VECTOR (5 downto 0)
       );
@@ -88,6 +94,11 @@ begin
          CLK => CLK,
          reset => RESET,
          CLK_1khz => clk_1khz
+   );
+   Inst_clk1Hz: clk1Hz Port Map (
+         CLK => CLK,
+         reset => RESET,
+         CLK_1hz => clk_1hz
    );
      
    Inst_SYNCHRONZR: SYNCHRONZR Port Map (
@@ -126,13 +137,23 @@ begin
   Inst_fsm: fsm Port Map (
       reset=>RESET,
       clk=>clk_1khz,
-      finish=>fin_de_cuenta,
+      ready=>ready_,
+      fin_cuenta=>fin_de_cuenta,
       switches=>Switches,
       led=>Led,
       TIEMPO=>sel_tiempo,
-      TEMPERATURA =>sel_temp
-      --display_time:out STD_LOGIC_VECTOR (5 downto 0);
-      --display_temp: out STD_LOGIC_VECTOR (7 downto 0)
+      TEMPERATURA =>sel_temp,
+      display_time=>tiempo,
+      display_temp=>temp
+  );
+     
+  Inst_temporizador: temporizador Port Map(
+     reset=>RESET,
+     clk=>clk_1hz,
+     ready=>ready_,
+     finish=>fin_de_cuenta,
+     display_time=>tiempo
+     
   );
  
 
