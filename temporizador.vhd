@@ -3,7 +3,7 @@ USE ieee.std_logic_1164.all;
 USE ieee.numeric_std.all;
 --
 Entity temporizador is 
-  Port( reset, clk, ok,ready: in std_logic;
+  Port( reset, clk,ready: in std_logic;
        finish: out std_logic;
        salida_time: out STD_LOGIC_VECTOR (7 downto 0);
        display_time:in STD_LOGIC_VECTOR (7 downto 0));
