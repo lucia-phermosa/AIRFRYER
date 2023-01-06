@@ -11,7 +11,7 @@ entity AIRFRYER is
       Temp_time : in std_logic_vector(3 downto 0);
       Led : out std_logic;
       Display1: out std_logic_vector(6 downto 0);
-      Display2: out std_logic_vector(6 downto 0)
+      Display2: out std_logic_vector(11 downto 0)
    );     
 end AIRFRYER;
 
@@ -87,9 +87,17 @@ architecture Behavioral of AIRFRYER is
              led : out std_logic_vector(6 DOWNTO 0)
       );
    End component; 
+   Component Conv_Bin_BCD
+      Port ( Bin : in std_logic_vector(7 DOWNTO 0);
+             Cen: out std_logic_vector(3 DOWNTO 0);
+             Dec: out std_logic_vector(3 DOWNTO 0);
+             Uni: out std_logic_vector(3 DOWNTO 0)
+      );
+   End component; 
    
 begin
   
+   
    Inst_clk1kHz: clk1kHz Port Map (
          CLK => CLK,
          reset => RESET,
@@ -155,6 +163,13 @@ begin
      display_time=>tiempo
      
   );
+  Inst_Conv_Bin_BCD: Conv_Bin_BCD Port Map (
+         Bin=>time,
+         Cen=>Display2(11 downto 8),
+         Dec=>Display2(7 downto 4),
+         Uni=>Display2(3 downto 0)
+      
+   );
  
 
 end Behavioral;
