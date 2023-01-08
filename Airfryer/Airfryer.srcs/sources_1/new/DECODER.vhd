@@ -42,6 +42,7 @@ ARCHITECTURE dataflow OF decoder IS
                 "0100000" WHEN "0110",--6
                 "0001111" WHEN "0111",--7
                 "0000000" WHEN "1000",--8
-                "0000100" WHEN "1001";--9
+                "0000100" WHEN "1001",--9
+                "1111111" when others;
                
 END ARCHITECTURE dataflow;
