@@ -10,21 +10,34 @@ entity AIRFRYER is
       Switches : in std_logic_vector(5 downto 0); 
       Temp_time : in std_logic_vector(3 downto 0);
       Led : out std_logic;
-      Display1: out std_logic_vector(6 downto 0);
-      Display2: out std_logic_vector(11 downto 0)
+      segment_time_u: out std_logic_vector(6 downto 0); --unidades del tiempo
+      segment_time_d: out std_logic_vector(6 downto 0); --decenas del tiempo
+      segment_time_c: out std_logic_vector(6 downto 0); --centemnas del tiempo
+      segment_temp_u: out std_logic_vector(6 downto 0); --unidades de la temperatura
+      segment_temp_d: out std_logic_vector(6 downto 0); --decenas de la temperatura
+      segment_temp_c: out std_logic_vector(6 downto 0); --centenas de la temperatura
+   
    );     
 end AIRFRYER;
 
 architecture Behavioral of AIRFRYER is
    signal boton_sync1: std_logic;
    signal boton_edge1: std_logic;
-   signal boton_sync2: std_logic_vector range'Temp_time;
-   signal boton_edge2: std_logic_vector range'Temp_time;
+   signal boton_sync2: std_logic_vector(temp_time'range);
+   signal boton_edge2: std_logic_vector (temp_time'range);
    signal sel_temp: std_logic_vector(7 downto 0); -- Salida del counter
-   signal sel_tiempo: std_logic_vector(5 downto 0); -- Salida del counter
+   signal sel_tiempo: std_logic_vector(7 downto 0); -- Salida del counter
    signal temp: std_logic_vector(7 downto 0); -- Salida de la fsm
-   signal tiempo: std_logic_vector(5 downto 0); -- Salida de la fsm
-   signal time: std_logic_vector(5 downto 0); -- Salida del temporizador
+   signal tiempo: std_logic_vector(7 downto 0); -- Salida de la fsm
+   signal time: std_logic_vector(7 downto 0); -- Salida del temporizador
+-------------------------------------------------------------------------------
+   signal tiempo_u: std_logic_vector(3 downto 0); -- unidades
+   signal tiempo_d: std_logic_vector(3 downto 0); -- decenas
+   signal tiempo_c: std_logic_vector(3 downto 0); -- centenas
+   signal temp_u: std_logic_vector(3 downto 0); -- unidades
+   signal temp_d: std_logic_vector(3 downto 0); -- decenas
+   signal temp_c: std_logic_vector(3 downto 0); -- centenas
+
    signal clk_1khz: std_logic;
    signal fin_de_cuenta:std_logic;
    signal ready_:std_logic;
@@ -59,7 +72,7 @@ architecture Behavioral of AIRFRYER is
       Port ( CLK : in STD_LOGIC;
              RESET : in STD_LOGIC;     
              TEMP_TIME : in STD_LOGIC_VECTOR (3 downto 0);
-             TIEMPO : out STD_LOGIC_VECTOR (5 downto 0); 
+             TIEMPO : out STD_LOGIC_VECTOR (7 downto 0); 
              TEMPERATURA : out STD_LOGIC_VECTOR (7 downto 0)
       );
    End component;
@@ -68,9 +81,9 @@ architecture Behavioral of AIRFRYER is
       Port ( reset, clk, ok,fin_cuenta: in std_logic;
              switches: in std_logic_vector(0 to 5);
              led,ready: out std_logic;
-             TIEMPO : in STD_LOGIC_VECTOR (5 downto 0); 
+             TIEMPO : in STD_LOGIC_VECTOR (7 downto 0); 
              TEMPERATURA : in STD_LOGIC_VECTOR (7 downto 0); 
-             display_time:out STD_LOGIC_VECTOR (5 downto 0);
+             display_time:out STD_LOGIC_VECTOR (7 downto 0);
              display_temp: out STD_LOGIC_VECTOR (7 downto 0)
       );
    End component;
@@ -163,13 +176,50 @@ begin
      display_time=>tiempo
      
   );
-  Inst_Conv_Bin_BCD: Conv_Bin_BCD Port Map (
+  Inst_Conv_Bin_BCD_time: Conv_Bin_BCD Port Map (
          Bin=>time,
-         Cen=>Display2(11 downto 8),
-         Dec=>Display2(7 downto 4),
-         Uni=>Display2(3 downto 0)
+         Cen=>tiempo_c,
+         Dec=>tiempo_d,
+         Uni=>tiempo_u
       
    );
+   Inst_Conv_Bin_BCD_temp: Conv_Bin_BCD Port Map (
+         Bin=>temp,
+         Cen=>temp_c,
+         Dec=>temp_d
+         Uni=>temp_u
+   );
+      
+     Inst_decoder_time_u: decoder Port Map(
+         code=>tiempo_u,
+         led=> segment_time_u
+   
+     );
+      Inst_decoder_time_d: decoder Port Map(
+         code=>tiempo_d,
+         led=> segment_time_d
+   
+     );
+      Inst_decoder_time_c: decoder Port Map(
+         code=>tiempo_c,
+         led=> segment_time_c
+   
+     );
+      Inst_decoder_temp_u: decoder Port Map(
+         code=>temp_u,
+         led=> segment_temp_u
+   
+     );
+      Inst_decoder_temp_d: decoder Port Map(
+         code=>temp_d,
+         led=> segment_temp_d
+   
+     );
+     Inst_decoder_temp_c: decoder Port Map(
+         code=>temp_c,
+         led=> segment_temp_c
+   
+     );
  
 
 end Behavioral;
