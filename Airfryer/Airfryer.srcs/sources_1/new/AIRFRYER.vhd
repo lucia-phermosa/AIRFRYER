@@ -25,6 +25,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity AIRFRYER is
    Port (
       RESET : in std_logic;
+      MANUAL  : in std_logic;
       CLK : in std_logic;
       OK : in std_logic;
       Switches : in std_logic_vector(5 downto 0); 
@@ -93,7 +94,8 @@ architecture Behavioral of AIRFRYER is
    
    Component COUNTER
       Port ( CLK : in STD_LOGIC;
-             RESET : in STD_LOGIC;     
+             RESET : in STD_LOGIC;
+             manual: in std_logic;     
              TEMP_TIME : in STD_LOGIC_VECTOR (3 downto 0);
              TIEMPO : out STD_LOGIC_VECTOR (7 downto 0); 
              TEMPERATURA : out STD_LOGIC_VECTOR (7 downto 0)
@@ -114,7 +116,7 @@ architecture Behavioral of AIRFRYER is
    Component temporizador
       Port ( reset, clk,ready: in std_logic;
              finish: out std_logic;
-             display_time:in STD_LOGIC_VECTOR (5 downto 0)
+             display_time:in STD_LOGIC_VECTOR (7 downto 0)
       );
    End component;
    
@@ -172,7 +174,8 @@ begin
   
   Inst_COUNTER: COUNTER Port Map (
       CLK => clk_1khz,
-      RESET => RESET,    
+      RESET => RESET, 
+      MANUAL => manual,   
       TEMP_TIME => boton_edge2,
       TIEMPO => sel_tiempo ,
       TEMPERATURA => sel_temp
