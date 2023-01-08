@@ -1,3 +1,4 @@
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
@@ -29,7 +30,7 @@ architecture Behavioral of AIRFRYER is
    signal sel_tiempo: std_logic_vector(7 downto 0); -- Salida del counter
    signal temp: std_logic_vector(7 downto 0); -- Salida de la fsm
    signal tiempo: std_logic_vector(7 downto 0); -- Salida de la fsm
-   signal time: std_logic_vector(7 downto 0); -- Salida del temporizador
+   signal tiempo1: std_logic_vector(7 downto 0); -- Salida del temporizador
 -------------------------------------------------------------------------------
    signal tiempo_u: std_logic_vector(3 downto 0); -- unidades
    signal tiempo_d: std_logic_vector(3 downto 0); -- decenas
@@ -39,18 +40,21 @@ architecture Behavioral of AIRFRYER is
    signal temp_c: std_logic_vector(3 downto 0); -- centenas
 
    signal clk_1khz: std_logic;
+   signal clk_1hz: std_logic;
    signal fin_de_cuenta:std_logic;
-   signal ready_:std_logic;
+   signal read_y:std_logic;
 
   Component clk1kHz 
       Port (CLK: in  STD_LOGIC;
             reset  : in  STD_LOGIC;
             CLK_1khz : out STD_LOGIC
       );
+     End Component;
+      
   Component clk1Hz 
       Port (CLK: in  STD_LOGIC;
-            reset  : in  STD_LOGIC;
-            CLK_1hz : out STD_LOGIC
+           reset  : in  STD_LOGIC;
+           CLK_1hz : out STD_LOGIC
       );
   End component;
    
@@ -78,7 +82,7 @@ architecture Behavioral of AIRFRYER is
    End component;
    
    Component fsm
-      Port ( reset, clk, ok,fin_cuenta: in std_logic;
+      Port ( reset, clk,fin_cuenta: in std_logic;
              switches: in std_logic_vector(0 to 5);
              led,ready: out std_logic;
              TIEMPO : in STD_LOGIC_VECTOR (7 downto 0); 
@@ -119,7 +123,7 @@ begin
    Inst_clk1Hz: clk1Hz Port Map (
          CLK => CLK,
          reset => RESET,
-         CLK_1hz => clk_1hz
+       CLK_1hz => clk_1hz
    );
      
    Inst_SYNCHRONZR: SYNCHRONZR Port Map (
@@ -158,7 +162,7 @@ begin
   Inst_fsm: fsm Port Map (
       reset=>RESET,
       clk=>clk_1khz,
-      ready=>ready_,
+      ready=>read_y,
       fin_cuenta=>fin_de_cuenta,
       switches=>Switches,
       led=>Led,
@@ -171,13 +175,13 @@ begin
   Inst_temporizador: temporizador Port Map(
      reset=>RESET,
      clk=>clk_1hz,
-     ready=>ready_,
+     ready=>read_y,
      finish=>fin_de_cuenta,
      display_time=>tiempo
      
   );
   Inst_Conv_Bin_BCD_time: Conv_Bin_BCD Port Map (
-         Bin=>time,
+         Bin=>tiempo1,
          Cen=>tiempo_c,
          Dec=>tiempo_d,
          Uni=>tiempo_u
@@ -186,7 +190,7 @@ begin
    Inst_Conv_Bin_BCD_temp: Conv_Bin_BCD Port Map (
          Bin=>temp,
          Cen=>temp_c,
-         Dec=>temp_d
+         Dec=>temp_d,
          Uni=>temp_u
    );
       
