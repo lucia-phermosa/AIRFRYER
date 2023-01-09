@@ -46,14 +46,7 @@ architecture Behavioral of VISUALIZER is
    signal code7 : std_logic_vector(3 downto 0);
    signal code8 : std_logic_vector(3 downto 0);
    
-   signal tiempo_u : std_logic_vector(3 downto 0);
-   signal tiempo_d : std_logic_vector(3 downto 0);
-   signal tiempo_c : std_logic_vector(3 downto 0);
-   signal temperatura_u : std_logic_vector(3 downto 0);
-   signal temperatura_d : std_logic_vector(3 downto 0);
-   signal temperatura_c : std_logic_vector(3 downto 0);
-   
-   signal anodos :  std_logic_vector(7 downto 0);
+   signal code : std_logic_vector(3 downto 0);
    
    Component Control_Anodo
       Port ( CLK : in std_logic;
@@ -65,8 +58,7 @@ architecture Behavioral of VISUALIZER is
         code6 : in std_logic_vector(3 downto 0);
         code7 : in std_logic_vector(3 downto 0);
         code8 : in std_logic_vector(3 downto 0);
-        refrescar_anodo : out std_logic_vector(7 downto 0); --vector que pone a 1 el ánodo correspondiente para actualizar
-        salida_disp : out std_logic_vector(6 downto 0) --salida de los displays
+        refrescar_anodo : out std_logic_vector(7 downto 0); 
       );
    End component;
    
@@ -80,12 +72,7 @@ architecture Behavioral of VISUALIZER is
         temp_d : in std_logic_vector(3 downto 0);
         temp_c : in std_logic_vector(3 downto 0);
         
-        tiempo_u : out std_logic_vector(3 downto 0);
-        tiempo_d : out std_logic_vector(3 downto 0);
-        tiempo_c : out std_logic_vector(3 downto 0);
-        temperatura_u : out std_logic_vector(3 downto 0);
-        temperatura_d : out std_logic_vector(3 downto 0);
-        temperatura_c : out std_logic_vector(3 downto 0)
+        code : out std_logic_vector(3 downto 0);
       );
    End component;
    
@@ -107,12 +94,11 @@ begin
         code6 => code6,
         code7 => code7,
         code8 => code8,      
-        refrescar_anodo => anodos,
-        salida_disp => AN
+        refrescar_anodo => AN,
    );
    
    Inst_MUX: MUX Port Map (
-        refrescar_anodo => anodos,
+        refrescar_anodo => AN,
         
         time_u => time_u,
         time_d => time_d,
@@ -121,42 +107,12 @@ begin
         temp_d => temp_d,
         temp_c => temp_c,
         
-        tiempo_u => tiempo_u,
-        tiempo_d => tiempo_d,
-        tiempo_c => tiempo_c,
-        temperatura_u => temperatura_u,
-        temperatura_d => temperatura_d,
-        temperatura_c => temperatura_c
+        code => code
    );
    
-   Inst_deco1: decoder Port Map (
-        code => tiempo_u,
+  Inst_deco: decoder Port Map (
+        code => code,
         led => segment
-   );
-   
-   Inst_deco2: decoder Port Map (
-        code => tiempo_d,
-        led => segment
-   );
-   
-   Inst_deco3: decoder Port Map (
-        code => tiempo_c,
-        led => segment
-   );
-
-   Inst_deco4: decoder Port Map (
-        code => temperatura_u,
-        led => segment
-   );
-   
-   Inst_deco5: decoder Port Map (
-        code => temperatura_d,
-        led => segment
-   );
-
-   Inst_deco6: decoder Port Map (
-        code => temperatura_c,
-        led => segment
-   );
+  );
 
 end Behavioral;
