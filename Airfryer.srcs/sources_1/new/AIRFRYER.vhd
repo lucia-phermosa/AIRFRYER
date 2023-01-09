@@ -31,7 +31,7 @@ entity AIRFRYER is
       Temp_time : in std_logic_vector(3 downto 0);
       Led : out std_logic;
       Segment : out std_logic_vector(6 downto 0);
-      AN : out std_logic_vector(6 downto 0)
+      AN : out std_logic_vector(7 downto 0)
    );     
 end AIRFRYER;
 
@@ -121,7 +121,7 @@ architecture Behavioral of AIRFRYER is
         temp_d : in std_logic_vector(3 downto 0);
         temp_c : in std_logic_vector(3 downto 0);
         segment : out std_logic_vector(6 downto 0);
-        AN : out std_logic_vector(6 downto 0)
+        AN : out std_logic_vector(7 downto 0)
       );
    End component; 
    
