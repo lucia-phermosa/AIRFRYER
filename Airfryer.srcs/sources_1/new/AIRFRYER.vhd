@@ -93,7 +93,8 @@ architecture Behavioral of AIRFRYER is
    Component temporizador
       Port ( reset, clk,ready: in std_logic;
              finish: out std_logic;
-             display_time:in STD_LOGIC_VECTOR (7 downto 0)
+             display_time:in STD_LOGIC_VECTOR (7 downto 0);
+            salida_time: out STD_LOGIC_VECTOR (7 downto 0)
       );
    End component;
    
@@ -177,7 +178,8 @@ begin
      clk=>CLK,
      ready=>read_y,
      finish=>fin_de_cuenta,
-     display_time=>tiempo
+     display_time=>tiempo,
+     salida_time =>tiempo1
      
   );
   Inst_Conv_Bin_BCD_time: Conv_Bin_BCD Port Map (
