@@ -94,7 +94,7 @@ begin
         code6 => code6,
         code7 => code7,
         code8 => code8,      
-        refrescar_anodo => AN,
+        refrescar_anodo => AN
    );
    
    Inst_MUX: MUX Port Map (
