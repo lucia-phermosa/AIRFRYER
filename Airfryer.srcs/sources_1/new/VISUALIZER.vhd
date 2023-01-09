@@ -32,7 +32,7 @@ entity VISUALIZER is
         temp_d : in std_logic_vector(3 downto 0);
         temp_c : in std_logic_vector(3 downto 0);
         segment : out std_logic_vector(6 downto 0);
-        AN : inout std_logic_vector(6 downto 0)
+        AN : inout std_logic_vector(7 downto 0)
     );
 end VISUALIZER;
 
