@@ -1,0 +1,335 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Mon Jan  9 16:25:48 2023
+# Process ID: 4560
+# Current directory: D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.runs/synth_1
+# Command line: vivado.exe -log AIRFRYER.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source AIRFRYER.tcl
+# Log file: D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.runs/synth_1/AIRFRYER.vds
+# Journal file: D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source AIRFRYER.tcl -notrace
+Command: synth_design -top AIRFRYER -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 12052
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1131.914 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'AIRFRYER' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/AIRFRYER.vhd:38]
+INFO: [Synth 8-3491] module 'SYNCHRONZR' declared at 'D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/synchronzr.vhd:24' bound to instance 'Inst_SYNCHRONZR' of component 'SYNCHRONZR' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/AIRFRYER.vhd:129]
+INFO: [Synth 8-638] synthesizing module 'SYNCHRONZR' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/synchronzr.vhd:30]
+INFO: [Synth 8-256] done synthesizing module 'SYNCHRONZR' (1#1) [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/synchronzr.vhd:30]
+INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/EDGEDETECTR.vhd:24' bound to instance 'Inst_EDGEDTCTR' of component 'EDGEDTCTR' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/AIRFRYER.vhd:135]
+INFO: [Synth 8-638] synthesizing module 'EDGEDTCTR' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/EDGEDETECTR.vhd:30]
+INFO: [Synth 8-256] done synthesizing module 'EDGEDTCTR' (2#1) [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/EDGEDETECTR.vhd:30]
+INFO: [Synth 8-3491] module 'SYNCHRONZR' declared at 'D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/synchronzr.vhd:24' bound to instance 'Inst_SYNCHRONZR_i' of component 'SYNCHRONZR' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/AIRFRYER.vhd:142]
+INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/EDGEDETECTR.vhd:24' bound to instance 'Inst_EDGEDTCTR_i' of component 'EDGEDTCTR' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/AIRFRYER.vhd:147]
+INFO: [Synth 8-3491] module 'SYNCHRONZR' declared at 'D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/synchronzr.vhd:24' bound to instance 'Inst_SYNCHRONZR_i' of component 'SYNCHRONZR' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/AIRFRYER.vhd:142]
+INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/EDGEDETECTR.vhd:24' bound to instance 'Inst_EDGEDTCTR_i' of component 'EDGEDTCTR' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/AIRFRYER.vhd:147]
+INFO: [Synth 8-3491] module 'SYNCHRONZR' declared at 'D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/synchronzr.vhd:24' bound to instance 'Inst_SYNCHRONZR_i' of component 'SYNCHRONZR' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/AIRFRYER.vhd:142]
+INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/EDGEDETECTR.vhd:24' bound to instance 'Inst_EDGEDTCTR_i' of component 'EDGEDTCTR' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/AIRFRYER.vhd:147]
+INFO: [Synth 8-3491] module 'SYNCHRONZR' declared at 'D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/synchronzr.vhd:24' bound to instance 'Inst_SYNCHRONZR_i' of component 'SYNCHRONZR' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/AIRFRYER.vhd:142]
+INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/EDGEDETECTR.vhd:24' bound to instance 'Inst_EDGEDTCTR_i' of component 'EDGEDTCTR' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/AIRFRYER.vhd:147]
+WARNING: [Synth 8-5640] Port 'manual' is missing in component declaration [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/AIRFRYER.vhd:73]
+INFO: [Synth 8-3491] module 'COUNTER' declared at 'D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/COUNTER.vhd:25' bound to instance 'Inst_COUNTER' of component 'COUNTER' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/AIRFRYER.vhd:154]
+INFO: [Synth 8-638] synthesizing module 'COUNTER' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/COUNTER.vhd:35]
+INFO: [Synth 8-256] done synthesizing module 'COUNTER' (3#1) [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/COUNTER.vhd:35]
+WARNING: [Synth 8-5640] Port 'ok' is missing in component declaration [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/AIRFRYER.vhd:82]
+INFO: [Synth 8-3491] module 'fsm' declared at 'D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/FSM.vhd:24' bound to instance 'Inst_fsm' of component 'fsm' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/AIRFRYER.vhd:162]
+INFO: [Synth 8-638] synthesizing module 'fsm' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/FSM.vhd:34]
+WARNING: [Synth 8-614] signal 'asig_time' is read in the process but is not in the sensitivity list [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/FSM.vhd:96]
+WARNING: [Synth 8-614] signal 'asig_temp' is read in the process but is not in the sensitivity list [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/FSM.vhd:96]
+INFO: [Synth 8-256] done synthesizing module 'fsm' (4#1) [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/FSM.vhd:34]
+WARNING: [Synth 8-5640] Port 'salida_time' is missing in component declaration [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/AIRFRYER.vhd:93]
+INFO: [Synth 8-3491] module 'temporizador' declared at 'D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/TEMPORIZADOR.vhd:25' bound to instance 'Inst_temporizador' of component 'temporizador' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/AIRFRYER.vhd:175]
+INFO: [Synth 8-638] synthesizing module 'temporizador' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/TEMPORIZADOR.vhd:32]
+WARNING: [Synth 8-614] signal 'display_time' is read in the process but is not in the sensitivity list [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/TEMPORIZADOR.vhd:67]
+INFO: [Synth 8-256] done synthesizing module 'temporizador' (5#1) [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/TEMPORIZADOR.vhd:32]
+INFO: [Synth 8-3491] module 'Conv_Bin_BCD' declared at 'D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/CONV_BIN_BCD.vhd:27' bound to instance 'Inst_Conv_Bin_BCD_time' of component 'Conv_Bin_BCD' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/AIRFRYER.vhd:183]
+INFO: [Synth 8-638] synthesizing module 'Conv_Bin_BCD' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/CONV_BIN_BCD.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'Conv_Bin_BCD' (6#1) [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/CONV_BIN_BCD.vhd:34]
+INFO: [Synth 8-3491] module 'Conv_Bin_BCD' declared at 'D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/CONV_BIN_BCD.vhd:27' bound to instance 'Inst_Conv_Bin_BCD_temp' of component 'Conv_Bin_BCD' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/AIRFRYER.vhd:190]
+INFO: [Synth 8-3491] module 'VISUALIZER' declared at 'D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/VISUALIZER.vhd:25' bound to instance 'Inst_visualizer' of component 'VISUALIZER' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/AIRFRYER.vhd:197]
+INFO: [Synth 8-638] synthesizing module 'VISUALIZER' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/VISUALIZER.vhd:39]
+INFO: [Synth 8-3491] module 'Control_Anodo' declared at 'D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/Control_Anodo.vhd:25' bound to instance 'Inst_ControlAnodo' of component 'Control_Anodo' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/VISUALIZER.vhd:100]
+INFO: [Synth 8-638] synthesizing module 'Control_Anodo' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/Control_Anodo.vhd:42]
+INFO: [Synth 8-3491] module 'decoder' declared at 'D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/DECODER.vhd:26' bound to instance 'Inst_deco1' of component 'decoder' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/Control_Anodo.vhd:64]
+INFO: [Synth 8-638] synthesizing module 'decoder' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/DECODER.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'decoder' (7#1) [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/DECODER.vhd:33]
+INFO: [Synth 8-3491] module 'decoder' declared at 'D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/DECODER.vhd:26' bound to instance 'Inst_deco2' of component 'decoder' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/Control_Anodo.vhd:68]
+INFO: [Synth 8-3491] module 'decoder' declared at 'D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/DECODER.vhd:26' bound to instance 'Inst_deco3' of component 'decoder' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/Control_Anodo.vhd:72]
+INFO: [Synth 8-3491] module 'decoder' declared at 'D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/DECODER.vhd:26' bound to instance 'Inst_deco4' of component 'decoder' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/Control_Anodo.vhd:76]
+INFO: [Synth 8-3491] module 'decoder' declared at 'D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/DECODER.vhd:26' bound to instance 'Inst_deco5' of component 'decoder' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/Control_Anodo.vhd:80]
+INFO: [Synth 8-3491] module 'decoder' declared at 'D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/DECODER.vhd:26' bound to instance 'Inst_deco6' of component 'decoder' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/Control_Anodo.vhd:84]
+INFO: [Synth 8-3491] module 'decoder' declared at 'D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/DECODER.vhd:26' bound to instance 'Inst_deco7' of component 'decoder' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/Control_Anodo.vhd:88]
+INFO: [Synth 8-3491] module 'decoder' declared at 'D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/DECODER.vhd:26' bound to instance 'Inst_deco8' of component 'decoder' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/Control_Anodo.vhd:92]
+INFO: [Synth 8-256] done synthesizing module 'Control_Anodo' (8#1) [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/Control_Anodo.vhd:42]
+INFO: [Synth 8-3491] module 'MUX' declared at 'D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/MUX.vhd:24' bound to instance 'Inst_MUX' of component 'MUX' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/VISUALIZER.vhd:114]
+INFO: [Synth 8-638] synthesizing module 'MUX' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/MUX.vhd:45]
+WARNING: [Synth 8-614] signal 'time_u' is read in the process but is not in the sensitivity list [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/MUX.vhd:48]
+WARNING: [Synth 8-614] signal 'time_d' is read in the process but is not in the sensitivity list [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/MUX.vhd:48]
+WARNING: [Synth 8-614] signal 'time_c' is read in the process but is not in the sensitivity list [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/MUX.vhd:48]
+WARNING: [Synth 8-614] signal 'temp_u' is read in the process but is not in the sensitivity list [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/MUX.vhd:48]
+WARNING: [Synth 8-614] signal 'temp_d' is read in the process but is not in the sensitivity list [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/MUX.vhd:48]
+WARNING: [Synth 8-614] signal 'temp_c' is read in the process but is not in the sensitivity list [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/MUX.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'MUX' (9#1) [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/MUX.vhd:45]
+INFO: [Synth 8-3491] module 'decoder' declared at 'D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/DECODER.vhd:26' bound to instance 'Inst_deco1' of component 'decoder' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/VISUALIZER.vhd:132]
+INFO: [Synth 8-3491] module 'decoder' declared at 'D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/DECODER.vhd:26' bound to instance 'Inst_deco2' of component 'decoder' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/VISUALIZER.vhd:137]
+INFO: [Synth 8-3491] module 'decoder' declared at 'D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/DECODER.vhd:26' bound to instance 'Inst_deco3' of component 'decoder' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/VISUALIZER.vhd:142]
+INFO: [Synth 8-3491] module 'decoder' declared at 'D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/DECODER.vhd:26' bound to instance 'Inst_deco4' of component 'decoder' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/VISUALIZER.vhd:147]
+INFO: [Synth 8-3491] module 'decoder' declared at 'D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/DECODER.vhd:26' bound to instance 'Inst_deco5' of component 'decoder' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/VISUALIZER.vhd:152]
+INFO: [Synth 8-3491] module 'decoder' declared at 'D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/DECODER.vhd:26' bound to instance 'Inst_deco6' of component 'decoder' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/VISUALIZER.vhd:157]
+INFO: [Synth 8-256] done synthesizing module 'VISUALIZER' (10#1) [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/VISUALIZER.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'AIRFRYER' (11#1) [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/AIRFRYER.vhd:38]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1131.914 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1131.914 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1131.914 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1131.914 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/constrs_1/new/Nexus-4-DDR.xdc]
+WARNING: [Vivado 12-584] No ports matched 'AN[7]'. [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/constrs_1/new/Nexus-4-DDR.xdc:77]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/constrs_1/new/Nexus-4-DDR.xdc:77]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/constrs_1/new/Nexus-4-DDR.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/constrs_1/new/Nexus-4-DDR.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/AIRFRYER_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/AIRFRYER_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1141.332 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1141.332 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1141.332 ; gain = 9.418
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1141.332 ; gain = 9.418
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1141.332 ; gain = 9.418
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'presente_reg' in module 'temporizador'
+INFO: [Synth 8-802] inferred FSM for state register 'flag_reg' in module 'Control_Anodo'
+WARNING: [Synth 8-327] inferring latch for variable 'presente_reg' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/FSM.vhd:56]
+WARNING: [Synth 8-327] inferring latch for variable 'asig_time_reg' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/FSM.vhd:66]
+WARNING: [Synth 8-327] inferring latch for variable 'asig_temp_reg' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/FSM.vhd:67]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+               mode_done |                             0001 |                               00
+               mode_cont |                             0010 |                               01
+               mode_over |                             0100 |                               10
+                  iSTATE |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'presente_reg' using encoding 'one-hot' in module 'temporizador'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              000 | 00000000000000000000000000000001
+*
+                 iSTATE6 |                              001 | 00000000000000000000000000000010
+                 iSTATE5 |                              010 | 00000000000000000000000000000011
+                 iSTATE4 |                              011 | 00000000000000000000000000000100
+                 iSTATE3 |                              100 | 00000000000000000000000000000101
+                 iSTATE2 |                              101 | 00000000000000000000000000000110
+                 iSTATE1 |                              110 | 00000000000000000000000000000111
+                 iSTATE0 |                              111 | 00000000000000000000000000001000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'flag_reg' using encoding 'sequential' in module 'Control_Anodo'
+WARNING: [Synth 8-327] inferring latch for variable 'tiempo_u_reg' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/MUX.vhd:51]
+WARNING: [Synth 8-327] inferring latch for variable 'tiempo_d_reg' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/MUX.vhd:53]
+WARNING: [Synth 8-327] inferring latch for variable 'tiempo_c_reg' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/MUX.vhd:55]
+WARNING: [Synth 8-327] inferring latch for variable 'temperatura_u_reg' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/MUX.vhd:61]
+WARNING: [Synth 8-327] inferring latch for variable 'temperatura_d_reg' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/MUX.vhd:63]
+WARNING: [Synth 8-327] inferring latch for variable 'temperatura_c_reg' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/MUX.vhd:65]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1141.332 ; gain = 9.418
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 18    
++---Registers : 
+	                8 Bit    Registers := 4     
+	                7 Bit    Registers := 1     
+	                3 Bit    Registers := 5     
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   6 Input    8 Bit        Muxes := 3     
+	   9 Input    8 Bit        Muxes := 1     
+	   8 Input    8 Bit        Muxes := 1     
+	   8 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 2     
+	   4 Input    6 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 10    
+	   3 Input    4 Bit        Muxes := 1     
+	   6 Input    3 Bit        Muxes := 1     
+	   8 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 16    
+	   6 Input    1 Bit        Muxes := 1     
+	   8 Input    1 Bit        Muxes := 1     
+	  10 Input    1 Bit        Muxes := 1     
+	   4 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Inst_fsm/presente_reg[2]__0/Q' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/FSM.vhd:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/FSM.vhd:48]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/FSM.vhd:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Inst_fsm/presente_reg[1]__0/Q' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/FSM.vhd:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/FSM.vhd:48]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/FSM.vhd:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Inst_fsm/presente_reg[0]__0/Q' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/FSM.vhd:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/FSM.vhd:48]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.srcs/sources_1/new/FSM.vhd:48]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1141.332 ; gain = 9.418
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1141.332 ; gain = 9.418
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1141.332 ; gain = 9.418
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1141.332 ; gain = 9.418
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1141.332 ; gain = 9.418
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1141.332 ; gain = 9.418
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1141.332 ; gain = 9.418
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1141.332 ; gain = 9.418
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1141.332 ; gain = 9.418
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1141.332 ; gain = 9.418
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |OBUF |    15|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1141.332 ; gain = 9.418
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 9 critical warnings and 9 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 1141.332 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1141.332 ; gain = 9.418
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1141.332 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1157.832 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: e1a40101
+INFO: [Common 17-83] Releasing license: Synthesis
+71 Infos, 22 Warnings, 10 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1157.832 ; gain = 25.918
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'D:/DatosDeUsuarios/Usuario/Desktop/SED/TRABAJO/Airfryer/Airfryer.runs/synth_1/AIRFRYER.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file AIRFRYER_utilization_synth.rpt -pb AIRFRYER_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Jan  9 16:26:27 2023...
