@@ -72,7 +72,7 @@ architecture Behavioral of VISUALIZER is
         temp_d : in std_logic_vector(3 downto 0);
         temp_c : in std_logic_vector(3 downto 0);
         
-        code : out std_logic_vector(3 downto 0);
+        code : out std_logic_vector(3 downto 0)
       );
    End component;
    
