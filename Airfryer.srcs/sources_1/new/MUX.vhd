@@ -46,6 +46,6 @@ with refrescar_anodo select
             temp_u when  "11101111",
             temp_d when  "11011111",
             time_c when  "10111111",
-            "11111111" when others;
+            "1111" when others;
    
 end Behavioral;
