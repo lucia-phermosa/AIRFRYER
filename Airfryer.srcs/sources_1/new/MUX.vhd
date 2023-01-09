@@ -40,12 +40,12 @@ end MUX;
 architecture Behavioral of MUX is
     
 with refrescar_anodo select
-    code <= time_u when refrescar_anodo := "11111110",
-            time_d when refrescar_anodo := "11111101",
-            time_c when refrescar_anodo := "11111011",
-            temp_u when refrescar_anodo := "11101111",
-            temp_d when refrescar_anodo := "11011111",
-            time_c when refrescar_anodo := "10111111",
+    code <= time_u when  "11111110",
+            time_d when  "11111101",
+            time_c when  "11111011",
+            temp_u when  "11101111",
+            temp_d when  "11011111",
+            time_c when  "10111111",
             "11111111" when others;
    
 end Behavioral;
