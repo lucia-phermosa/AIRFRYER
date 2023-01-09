@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Mon Jan  9 11:22:09 2023
+# Process ID: 5048
+# Current directory: C:/Users/sed/Downloads/AIRFRYER-master/AIRFRYER-master/Airfryer/Airfryer.runs/synth_1
+# Command line: vivado.exe -log AIRFRYER.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source AIRFRYER.tcl
+# Log file: C:/Users/sed/Downloads/AIRFRYER-master/AIRFRYER-master/Airfryer/Airfryer.runs/synth_1/AIRFRYER.vds
+# Journal file: C:/Users/sed/Downloads/AIRFRYER-master/AIRFRYER-master/Airfryer/Airfryer.runs/synth_1\vivado.jou
+# Running On: DESKTOP-28O1IPC, OS: Windows, CPU Frequency: 2808 MHz, CPU Physical cores: 6, Host memory: 8431 MB
+#-----------------------------------------------------------
+source AIRFRYER.tcl -notrace

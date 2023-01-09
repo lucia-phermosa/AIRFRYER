@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1673259772">
+  <File Type="ROUTE-PWR" Name="AIRFRYER_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="AIRFRYER.tcl"/>
+  <File Type="BITSTR-MMI" Name="AIRFRYER.mmi"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="AIRFRYER_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="AIRFRYER_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="AIRFRYER_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="AIRFRYER_reports.tcl"/>
+  <File Type="OPT-TIMING" Name="AIRFRYER_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="AIRFRYER_opt.dcp"/>
+  <File Type="OPT-DRC" Name="AIRFRYER_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="AIRFRYER.hwdef"/>
+  <File Type="PWROPT-DCP" Name="AIRFRYER_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="AIRFRYER_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="AIRFRYER_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="AIRFRYER_placed.dcp"/>
+  <File Type="PLACE-IO" Name="AIRFRYER_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="AIRFRYER_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="AIRFRYER_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="AIRFRYER_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="AIRFRYER_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="AIRFRYER_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="AIRFRYER_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BIN" Name="AIRFRYER.bin"/>
+  <File Type="PLACE-TIMING" Name="AIRFRYER_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="AIRFRYER_postplace_pwropt.dcp"/>
+  <File Type="BITSTR-MSK" Name="AIRFRYER.msk"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="AIRFRYER_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="AIRFRYER_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="AIRFRYER_drc_physopted.rpt"/>
+  <File Type="BITSTR-RBT" Name="AIRFRYER.rbt"/>
+  <File Type="PHYSOPT-TIMING" Name="AIRFRYER_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="AIRFRYER_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="AIRFRYER_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="AIRFRYER_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="AIRFRYER_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="AIRFRYER_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="AIRFRYER_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="AIRFRYER_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="AIRFRYER_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="AIRFRYER_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="AIRFRYER_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="AIRFRYER_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="AIRFRYER_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="AIRFRYER_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="AIRFRYER_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="AIRFRYER_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="AIRFRYER_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="AIRFRYER_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="AIRFRYER_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="AIRFRYER_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="AIRFRYER_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="AIRFRYER_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="AIRFRYER_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="AIRFRYER_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="AIRFRYER_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="AIRFRYER_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="AIRFRYER_bus_skew_postroute_physopted.rpt"/>
+  <File Type="BG-BIT" Name="AIRFRYER.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="AIRFRYER_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="AIRFRYER_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="AIRFRYER.nky"/>
+  <File Type="BITSTR-BMM" Name="AIRFRYER_bd.bmm"/>
+  <File Type="PDI-FILE" Name="AIRFRYER.pdi"/>
+  <File Type="RCFI_FILE" Name="AIRFRYER.rcfi"/>
+  <File Type="CFI_FILE" Name="AIRFRYER.cfi"/>
+  <File Type="RNPI_FILE" Name="AIRFRYER.rnpi"/>
+  <File Type="NPI_FILE" Name="AIRFRYER.npi"/>
+  <File Type="RBD_FILE" Name="AIRFRYER.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="AIRFRYER.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="AIRFRYER.sysdef"/>
+  <File Type="BG-BGN" Name="AIRFRYER.bgn"/>
+  <File Type="BG-DRC" Name="AIRFRYER.drc"/>
+  <File Type="RDI-RDI" Name="AIRFRYER.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="ROUTE-RQS" Name="AIRFRYER_routed.rqs"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="AIRFRYER_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/CLK1HZ.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/CLK1KHZ.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/CONV_BIN_BCD.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/COUNTER.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Control_Anodo.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/DECODER.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/EDGEDETECTR.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/FSM.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/TEMPORIZADOR.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/synchronzr.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/AIRFRYER.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="AIRFRYER"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/digilent-xdc-master/Nexys-4-DDR-Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../digilent-xdc-master/digilent-xdc-master/Nexys-4-DDR-Master.xdc"/>
+        <Attr Name="ImportTime" Val="1669058197"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/digilent-xdc-master/Nexys-4-DDR-Master.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream">
+      <Option Id="BinFile">1</Option>
+    </Step>
+  </Strategy>
+</GenRun>
