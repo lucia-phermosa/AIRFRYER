@@ -34,7 +34,7 @@ entity Control_Anodo is
         code6 : in std_logic_vector(3 downto 0);
         code7 : in std_logic_vector(3 downto 0);
         code8 : in std_logic_vector(3 downto 0);
-        refrescar_anodo : out std_logic_vector(7 downto 0); 
+        refrescar_anodo : out std_logic_vector(7 downto 0)
     );
 end Control_Anodo;
 
