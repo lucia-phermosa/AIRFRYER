@@ -38,7 +38,7 @@ entity MUX is
 end MUX;
 
 architecture Behavioral of MUX is
-    
+begin
 with refrescar_anodo select
     code <= time_u when  "11111110",
             time_d when  "11111101",
